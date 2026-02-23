@@ -56,13 +56,15 @@ let
   nextMeeting = builtins.head upcomingMeetings;
 
   renderNextMeeting = m: let
+    d = parseDate m.date;
+    dow = builtins.elemAt dayNames (dayOfWeek d.year d.month d.day);
     dateFmt = formatDateLong m.date;
     loc = m.location;
   in ''
     <h2>NEXT MEETING</h2>
     <div class="next">
       <dl>
-        <dt>#${toString m.number} — ${dateFmt}</dt>
+        <dt>#${toString m.number} — ${dow}, ${dateFmt}</dt>
         <dd>Room ${loc.room}, ${loc.name}<br>${loc.address}</dd>
       </dl>
     </div>
