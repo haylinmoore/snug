@@ -146,12 +146,13 @@ in
       color: #888;
       border-bottom: 1px solid #333;
     }
+    a { color: #5fb8f2; }
   </style>
 </head>
 <body>
   <h1>Seattle <span class="accent">NIX</span> User Group</h1>
   <p>A casual meetup for Nix users and the Nix-curious in the Seattle area.</p>
-  <p>We meet the second Wednesday of each month, 6:00-8:00 PM.</p>
+  <p>We meet the second Wednesday of each month, 6:00-8:00 PM. <a href="calendar.ics">iCal</a></p>
   <hr>
 
 ${renderNextMeeting nextMeeting}
