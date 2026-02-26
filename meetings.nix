@@ -14,7 +14,7 @@ let
   };
 in
 [
-  { date = "2026-03-11"; location = bellevueCityHall "TBD"; upcoming = true; }
+  { date = "2026-03-11"; location = bellevueCityHall "1E-110"; upcoming = true; }
   { date = "2026-02-18"; location = bellevueCityHall "1E-110"; }
   { date = "2025-09-27"; location = victrola; }
   { date = "2025-07-27"; location = victrola; }
