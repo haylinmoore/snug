@@ -152,7 +152,7 @@ in
 <body>
   <h1>Seattle <span class="accent">NIX</span> User Group</h1>
   <p>A casual meetup for Nix users and the Nix-curious in the Seattle area.</p>
-  <p>We meet the second Wednesday of each month, 6:00-8:00 PM. <a href="calendar.ics">iCal</a></p>
+  <p>We meet the second Wednesday of each month, 6:00-8:00 PM. Talk to us on <a href="https://matrix.to/#/#seattle-nix-user-group:matrix.org">Matrix</a>. Add our meetups to your <a href="calendar.ics">calendar</a>.</p>
   <hr>
 
 ${renderNextMeeting nextMeeting}
