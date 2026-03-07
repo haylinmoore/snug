@@ -13,15 +13,24 @@ let
     (builtins.elemAt sorted i) // { number = i + 1; }
   ) len;
 
+  formatIcalTime = t: let
+    hours = t / 100;
+    minutes = t - (hours * 100);
+    hStr = if hours < 10 then "0${toString hours}" else toString hours;
+    mStr = if minutes < 10 then "0${toString minutes}" else toString minutes;
+  in "${hStr}${mStr}00";
+
   renderEvent = m: let
     date = formatIcalDate m.date;
     loc = m.location;
     location = escapeIcal "Room ${loc.room}, ${loc.name}, ${loc.address}";
+    dtstart = formatIcalTime m.start;
+    dtend = formatIcalTime m.end;
   in ''
     BEGIN:VEVENT
     UID:meeting-${toString m.number}@seattlenix.org
-    DTSTART;TZID=America/Los_Angeles:${date}T180000
-    DTEND;TZID=America/Los_Angeles:${date}T200000
+    DTSTART;TZID=America/Los_Angeles:${date}T${dtstart}
+    DTEND;TZID=America/Los_Angeles:${date}T${dtend}
     SUMMARY:SNUG #${toString m.number}
     LOCATION:${location}
     END:VEVENT'';

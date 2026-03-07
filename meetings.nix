@@ -14,9 +14,9 @@ let
   };
 in
 [
-  { date = "2026-03-11"; location = bellevueCityHall "1E-110"; upcoming = true; }
-  { date = "2026-02-18"; location = bellevueCityHall "1E-110"; }
-  { date = "2025-09-27"; location = victrola; }
-  { date = "2025-07-27"; location = victrola; }
-  { date = "2025-05-24"; location = victrola; }
+  { date = "2026-03-11"; location = bellevueCityHall "1E-110"; upcoming = true; start = 1800; end = 2000;}
+  { date = "2026-02-18"; location = bellevueCityHall "1E-110"; start = 1800; end = 2000;}
+  { date = "2025-09-27"; location = victrola; start = 1800; end = 2000; }
+  { date = "2025-07-27"; location = victrola; start = 1800; end = 2000; }
+  { date = "2025-05-24"; location = victrola; start = 1800; end = 2000; }
 ]

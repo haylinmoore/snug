@@ -28,6 +28,18 @@ let
   monthNamesShort = ["Jan" "Feb" "Mar" "Apr" "May" "Jun"
                      "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"];
 
+  # Format military time int (e.g. 1800) to "6:00 PM"
+  formatTime = t: let
+    hours = t / 100;
+    minutes = t - (hours * 100);
+    isPM = hours >= 12;
+    h12 = if hours == 0 then 12
+          else if hours > 12 then hours - 12
+          else hours;
+    minStr = if minutes < 10 then "0${toString minutes}" else toString minutes;
+    ampm = if isPM then "PM" else "AM";
+  in "${toString h12}:${minStr} ${ampm}";
+
   # "March 11, 2026"
   formatDateLong = dateStr: let
     d = parseDate dateStr;
@@ -64,7 +76,7 @@ let
     <h2>NEXT MEETING</h2>
     <div class="next">
       <dl>
-        <dt>#${toString m.number} — ${dow}, ${dateFmt}</dt>
+        <dt>#${toString m.number} — ${dow}, ${dateFmt}, ${formatTime m.start}-${formatTime m.end}</dt>
         <dd>Room ${loc.room}, ${loc.name}<br>${loc.address}</dd>
       </dl>
     </div>
