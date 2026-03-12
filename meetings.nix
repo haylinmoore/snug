@@ -2,7 +2,7 @@ let
   bellevueCityHall = room: {
     name = "Bellevue City Hall";
     city = "Bellevue, WA";
-    inherit room;
+    room = "Room ${room}";
     address = "450 110th Ave NE, Bellevue, WA 98004";
   };
 
@@ -12,9 +12,17 @@ let
     room = "Community Room";
     address = "2060 NW Market St, Seattle, WA 98107";
   };
+
+  wsecu = {
+    name = "WSECU";
+    city = "Seattle, WA";
+    room = "Community Space";
+    address = "1121 NE 45th St, Seattle, WA 98105";
+  };
 in
 [
-  { date = "2026-03-11"; location = bellevueCityHall "1E-110"; upcoming = true; start = 1800; end = 2000;}
+  { date = "2026-04-8"; location = wsecu; upcoming = true; start = 1800; end = 2000;}
+  { date = "2026-03-11"; location = bellevueCityHall "1E-110"; start = 1800; end = 2000;}
   { date = "2026-02-18"; location = bellevueCityHall "1E-110"; start = 1800; end = 2000;}
   { date = "2025-09-27"; location = victrola; start = 1800; end = 2000; }
   { date = "2025-07-27"; location = victrola; start = 1800; end = 2000; }
