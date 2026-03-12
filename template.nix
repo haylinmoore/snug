@@ -37,8 +37,8 @@ let
           else if hours > 12 then hours - 12
           else hours;
     minStr = if minutes < 10 then "0${toString minutes}" else toString minutes;
-    ampm = if isPM then "PM" else "AM";
-  in "${toString h12}:${minStr} ${ampm}";
+    ampm = if isPM then "pm" else "am";
+  in "${toString h12}:${minStr}${ampm}";
 
   # "March 11, 2026"
   formatDateLong = dateStr: let
@@ -76,7 +76,7 @@ let
     <h2>NEXT MEETING</h2>
     <div class="next">
       <dl>
-        <dt>#${toString m.number} — ${dow}, ${dateFmt}, ${formatTime m.start}-${formatTime m.end}</dt>
+        <dt>#${toString m.number} — ${formatTime m.start}-${formatTime m.end}, ${dow}, ${dateFmt}</dt>
         <dd>Room ${loc.room}, ${loc.name}<br>${loc.address}</dd>
       </dl>
     </div>
@@ -164,7 +164,7 @@ in
 <body>
   <h1>Seattle <span class="accent">NIX</span> User Group</h1>
   <p>A casual meetup for Nix users and the Nix-curious in the Seattle area.</p>
-  <p>We meet the second Wednesday of each month, 6:00-8:00 PM. Talk to us on <a href="https://matrix.to/#/#seattle-nix-user-group:matrix.org">Matrix</a>. Add our meetups to your <a href="calendar.ics">calendar</a>.</p>
+  <p>We try to meet once a month. Talk to us on <a href="https://matrix.to/#/#seattle-nix-user-group:matrix.org">Matrix</a>. Add our meetups to your <a href="calendar.ics">calendar</a>.</p>
   <hr>
 
 ${renderNextMeeting nextMeeting}
