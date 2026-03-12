@@ -28,7 +28,7 @@ let
     dtend = formatIcalTime m.end;
   in ''
     BEGIN:VEVENT
-    UID:meeting-${toString m.number}@seattlenix.org
+    UID:${toString m.number}@nix.seattle.wa.us
     DTSTART;TZID=America/Los_Angeles:${date}T${dtstart}
     DTEND;TZID=America/Los_Angeles:${date}T${dtend}
     SUMMARY:SNUG #${toString m.number}
