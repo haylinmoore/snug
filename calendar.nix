@@ -23,7 +23,7 @@ let
   renderEvent = m: let
     date = formatIcalDate m.date;
     loc = m.location;
-    location = escapeIcal "${loc.room}, ${loc.name}, ${loc.address}";
+    location = escapeIcal "${loc.label}, ${loc.address}";
     dtstart = formatIcalTime m.start;
     dtend = formatIcalTime m.end;
   in ''

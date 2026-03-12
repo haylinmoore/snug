@@ -77,7 +77,7 @@ let
     <div class="next">
       <dl>
         <dt>#${toString m.number} — ${formatTime m.start}-${formatTime m.end}, ${dow}, ${dateFmt}</dt>
-        <dd>${loc.room}, ${loc.name}<br>${loc.address}</dd>
+        <dd>${loc.label}<br>${loc.address}</dd>
       </dl>
     </div>
   '';

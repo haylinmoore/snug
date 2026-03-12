@@ -1,22 +1,22 @@
 let
-  bellevueCityHall = room: {
+  bellevueCityHall = room: rec {
     name = "Bellevue City Hall";
+    label = "${name} Room ${room}";
     city = "Bellevue, WA";
-    room = "Room ${room}";
     address = "450 110th Ave NE, Bellevue, WA 98004";
   };
 
-  victrola = {
+  victrola = rec {
     name = "Victrola Coffee Roasters";
+    label = "${name} Community Room";
     city = "Seattle, WA";
-    room = "Community Room";
     address = "2060 NW Market St, Seattle, WA 98107";
   };
 
-  wsecu = {
+  wsecu = rec {
     name = "WSECU";
+    label = "${name} Community Space";
     city = "Seattle, WA";
-    room = "Community Space";
     address = "1121 NE 45th St, Seattle, WA 98105";
   };
 in
