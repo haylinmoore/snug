@@ -21,8 +21,9 @@ let
   };
 in
 [
-  { date = "2026-05-13"; location = wsecu; upcoming = true; start = 1800; end = 2000;}
-  { date = "2026-04-8"; location = wsecu; start = 1800; end = 2000;}
+  { date = "2026-06-10"; location = wsecu; upcoming = true; start = 1800; end = 2000;}
+  { date = "2026-05-13"; location = wsecu; start = 1800; end = 2000;}
+  { date = "2026-04-08"; location = wsecu; start = 1800; end = 2000;}
   { date = "2026-03-11"; location = bellevueCityHall "1E-110"; start = 1800; end = 2000;}
   { date = "2026-02-18"; location = bellevueCityHall "1E-110"; start = 1800; end = 2000;}
   { date = "2025-09-27"; location = victrola; start = 1800; end = 2000; }
